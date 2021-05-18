@@ -1,5 +1,15 @@
 // Assignment code here
 
+const generatePassword = () => {
+  const pass = '';
+  const lower = window.prompt('Would you like to use lowercase letters?');
+  if (lower == 'Yes') {
+    console.log('nice we made it this far lol');
+  }
+  window.prompt('Would you like to use uppercase letters?');
+  window.prompt('Would you like to use numbers?');
+  window.prompt('Would you like to use special characters??');
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -8,6 +18,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  console.log('hello');
 
   passwordText.value = password;
 
