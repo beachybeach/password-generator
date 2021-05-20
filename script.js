@@ -5,6 +5,12 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
 const generatePassword = () => {
+  const len = window.prompt('How many characters would you like your password? Choose between 8 and 30');
+  if (!len) {
+    window.alert('You need to enter a value!')
+  } else if (len < 8 || len > 30) {
+    window.alert('Password must be between 8 and 30!');
+  }
   let password = [];
   const lower = window.prompt('Would you like to use lowercase letters?');
   if (lower == 'Yes' || lower == "yes" || lower == "YES") {
