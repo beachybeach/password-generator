@@ -26,7 +26,7 @@ const generatePassword = () => {
     password.push(special[Math.floor(Math.random() * letters.length)]);
     console.log(password);
   }
-  console.log(password.join(''));
+  return password.join('');
 }
 
 // Get references to the #generate element
