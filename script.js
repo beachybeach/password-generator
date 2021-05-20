@@ -16,8 +16,17 @@ const generatePassword = () => {
     password.push(letters[Math.floor(Math.random() * letters.length)].toLocaleUpperCase());
     console.log(password);
   }
-  window.prompt('Would you like to use numbers?');
-  window.prompt('Would you like to use special characters??');
+  const nums = window.prompt('Would you like to use numbers?');
+  if (nums == 'Yes' || nums == "yes" || nums == "YES") {
+    password.push(numbers[Math.floor(Math.random() * numbers.length)]);
+    console.log(password);
+  }
+  const spec = window.prompt('Would you like to use special characters??');
+  if (spec == 'Yes' || spec == "yes" || spec == "YES") {
+    password.push(special[Math.floor(Math.random() * letters.length)]);
+    console.log(password);
+  }
+  console.log(password.join(''));
 }
 
 // Get references to the #generate element
